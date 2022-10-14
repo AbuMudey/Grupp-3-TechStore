@@ -1,0 +1,43 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+#bildblock{
+    position: relative;
+    margin-top: 100px;
+    display: flexbox;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+
+}
+#lgmobil{
+    max-width: 20%;
+    margin: auto;
+}
+#lg{
+
+    margin-bottom: 50px;
+}
+
+#iphonemobil{
+    max-width: 20%;
+    margin: auto;
+}
+
+#iphone{
+    margin-bottom: 50px;
+}
+#oneplusmobil{
+    max-width: 35%;
+    margin: auto;
+}
+#oneplus{
+    margin-bottom: 50px;
+}
+#samsungmobil{
+    max-width: 20%;
+    margin: auto;
+}
+#samsung{
+    margin-bottom: 50px;
+}
+
