@@ -1,0 +1,26 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* styling för header */
+header {
+    background-color: rgb(27, 26, 26);
+    width: 100%;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header h1 {
+    color: white;
+    padding-left: 3rem;
+}
+
+.fa-solid {
+    color: white;
+    font-size: 30px;
+    padding-right: 3rem;
+}
