@@ -6,6 +6,15 @@
     box-sizing: border-box;
 }
 
+/*fixed header. But the items scroll above the header. dosent look good*/
+.fixed-header{
+    top:0;
+    width: 100;
+    position: fixed;
+    /* background-color: black; */
+
+}
+
 /* styling för header */
 header {
     background-color: rgb(27, 26, 26);
@@ -30,7 +39,7 @@ header h1 {
 
 #bildblock{
     position: relative;
-    margin-top: 100px;
+    margin-top: px;
     display: flexbox;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -40,15 +49,60 @@ header h1 {
 #lgmobil{
     max-width: 20%;
     margin: auto;
+    
+}
+
+/*insert trash can logo in the button*/
+#lgremove{
+    width: 15%;
+    height: 35px;
+    border-radius: 5px;
+    background-color:crimson;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    color: white;
+    display: none; /*the remove button is hidden*/
+
+}
+/*insert choping cart in the button*/
+#lgadd{
+    width: 15%;
+    height: 35px;
+    border-radius: 5px;
+    background-color:dodgerblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    color: white;
 }
 #lg{
-
     margin-bottom: 50px;
 }
 
 #iphonemobil{
     max-width: 20%;
     margin: auto;
+}
+
+/*insert trash can logo in the button*/
+#iphoneremove{
+    width: 15%;
+    height: 35px;
+    border-radius: 5px;
+    background-color:crimson;
+    font-size: large;
+    color: white;
+    display: none; /*the remove button is hidden*/
+}
+/*in
+sert choping cart logo in the button*/
+#iphoneadd{
+    width: 15%;
+    height: 35px;
+    border-radius: 5px;
+    background-color:dodgerblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    color: white;
 }
 
 #iphone{
@@ -58,6 +112,29 @@ header h1 {
     max-width: 35%;
     margin: auto;
 }
+
+/*insert trash can logo in the button*/
+#oneplusremove{
+    width: 15%;
+    height: 35px;
+    border-radius: 5px;
+    background-color:crimson;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    color: white;
+    display: none; /*the remove button is hidden*/
+}
+
+/*insert choping cart logo in the button*/
+#oneplusadd{
+    width: 15%;
+    height: 35px;
+    border-radius: 5px;
+    background-color:dodgerblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: large;
+    color: white;
+}
 #oneplus{
     margin-bottom: 50px;
 }
@@ -65,6 +142,29 @@ header h1 {
     max-width: 20%;
     margin: auto;
 }
+
+/*insert trash can logo in the button*/
+#samsungremove{ width: 15%;
+    width: 15%;
+    height: 35px;
+    border-radius: 5px;
+    background-color:crimson;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+    color: white;
+}
+
+/*insert choping cart logo in the button*/
+#samsungadd{
+    width: 15%;
+    height: 35px;
+    border-radius: 5px;
+    background-color:dodgerblue;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+    color: white;
+}
+
 #samsung{
     margin-bottom: 50px;
 }
