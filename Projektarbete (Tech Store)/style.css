@@ -11,6 +11,8 @@
     top:0;
     width: 100;
     position: fixed;
+    /*La till denna för kunna clicka på kundvagn*/
+    z-index: 1;
     /* background-color: black; */
 
 }
