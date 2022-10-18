@@ -41,7 +41,7 @@ header h1 {
 
 #bildblock{
     position: relative;
-    margin-top: px;
+    margin-top: 100px;
     display: flexbox;
     text-align: center;
     font-family: 'Roboto', sans-serif;
@@ -165,8 +165,20 @@ sert choping cart logo in the button*/
     font-family: 'Roboto', sans-serif;
     font-size: x-large;
     color: white;
+    
 }
 
 #samsung{
     margin-bottom: 50px;
+}
+
+#hej{
+    position:fixed;
+    top: 200px;
+    left: 40%;
+}
+#demo{
+    position:fixed;
+    top: 300px;
+    left: 40%; 
 }

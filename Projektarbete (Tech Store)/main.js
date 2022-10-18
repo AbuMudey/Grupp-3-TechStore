@@ -1,5 +1,5 @@
 var listOfProducts;
-
+var kundnr=document.getElementById("kundvagnnr");
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
     fetch("./products.json")
@@ -21,11 +21,34 @@ function initSite() {
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
     // Check your console to see that the products are stored in the listOfProducts varible.
+    
     console.log(listOfProducts);
+  for(const product of listOfProducts){
+    const h1=document.createElement("h1");
+    h1.classList.add("heading");
+    h1.innerText=product.title;
+    bildblock.appendChild(h1);
+    
+    const p=document.createElement("p");
+    p.classList.add("description");
+    p.innerText=product.description;
+    bildblock.appendChild(p);
 
-    // Add your code here, remember to brake your code in to smaller function blocks
+    const img=document.createElement("img");
+    img.classList.add("image");
+    img.setAttribute("src" ,`assets/${product.image}`);
+    bildblock.appendChild(img);
+
+    const price=document.createElement("p");
+    price.classList.add("price");
+    p.innerText=product.price;
+    bildblock.appendChild(p);
+
+  }
     // to reduce complexity and increase readability. Each function should have
     // an explainetory comment like the one for this function, see row 22.
-    
+    // Add your code here, remember to brake your code in to smaller function blocks
     // TODO: Remove the console.log and these comments when you've read them.
 }
+
+
