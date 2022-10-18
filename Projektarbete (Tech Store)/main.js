@@ -41,7 +41,7 @@ function addProductsToWebpage() {
 
     const price=document.createElement("p");
     price.classList.add("price");
-    price.innerText=product.price;
+    price.innerText=product.price + " kr";
     bildblock.appendChild(price);
 
   }
