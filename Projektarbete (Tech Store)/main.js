@@ -13,6 +13,7 @@ function loadProducts() {
 }
 
 
+
 function initSite() {
     loadProducts();
     // This would also be a good place to initialize other parts of the UI
@@ -44,6 +45,10 @@ function addProductsToWebpage() {
     price.innerText=product.price + " kr";
     bildblock.appendChild(price);
 
+    const btn = document.createElement('button')
+    btn.innerText = 'Lägg till kundvagn';
+    document.body.appendChild(btn);
+  
   }
     // to reduce complexity and increase readability. Each function should have
     // an explainetory comment like the one for this function, see row 22.
