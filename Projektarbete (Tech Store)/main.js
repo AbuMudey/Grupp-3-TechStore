@@ -41,8 +41,8 @@ function addProductsToWebpage() {
 
     const price=document.createElement("p");
     price.classList.add("price");
-    p.innerText=product.price;
-    bildblock.appendChild(p);
+    price.innerText=product.price;
+    bildblock.appendChild(price);
 
   }
     // to reduce complexity and increase readability. Each function should have
