@@ -46,139 +46,22 @@ header h1 {
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: x-large;
-
-}
-#lgmobil{
-    max-width: 20%;
-    margin: auto;
-    
 }
 
-/*insert trash can logo in the button*/
-#lgremove{
-    width: 15%;
-    height: 35px;
-    border-radius: 5px;
-    background-color:crimson;
-    font-family: 'Roboto', sans-serif;
+.image{
+    width: 200px;
+    padding-top: 20px;
+}
+
+.description{
+    font-size:small;
+    padding-top: 20px;
+    font-weight: 200;
+}
+
+.price{
     font-size: large;
-    color: white;
-    display: none; /*the remove button is hidden*/
-
 }
-/*insert choping cart in the button*/
-#lgadd{
-    width: 15%;
-    height: 35px;
-    border-radius: 5px;
-    background-color:dodgerblue;
-    font-family: 'Roboto', sans-serif;
-    font-size: large;
-    color: white;
-}
-#lg{
-    margin-bottom: 50px;
-}
-
-#iphonemobil{
-    max-width: 20%;
-    margin: auto;
-}
-
-/*insert trash can logo in the button*/
-#iphoneremove{
-    width: 15%;
-    height: 35px;
-    border-radius: 5px;
-    background-color:crimson;
-    font-size: large;
-    color: white;
-    display: none; /*the remove button is hidden*/
-}
-/*in
-sert choping cart logo in the button*/
-#iphoneadd{
-    width: 15%;
-    height: 35px;
-    border-radius: 5px;
-    background-color:dodgerblue;
-    font-family: 'Roboto', sans-serif;
-    font-size: large;
-    color: white;
-}
-
-#iphone{
-    margin-bottom: 50px;
-}
-#oneplusmobil{
-    max-width: 35%;
-    margin: auto;
-}
-
-/*insert trash can logo in the button*/
-#oneplusremove{
-    width: 15%;
-    height: 35px;
-    border-radius: 5px;
-    background-color:crimson;
-    font-family: 'Roboto', sans-serif;
-    font-size: large;
-    color: white;
-    display: none; /*the remove button is hidden*/
-}
-
-/*insert choping cart logo in the button*/
-#oneplusadd{
-    width: 15%;
-    height: 35px;
-    border-radius: 5px;
-    background-color:dodgerblue;
-    font-family: 'Roboto', sans-serif;
-    font-size: large;
-    color: white;
-}
-#oneplus{
-    margin-bottom: 50px;
-}
-#samsungmobil{
-    max-width: 20%;
-    margin: auto;
-}
-
-/*insert trash can logo in the button*/
-#samsungremove{ width: 15%;
-    width: 15%;
-    height: 35px;
-    border-radius: 5px;
-    background-color:crimson;
-    font-family: 'Roboto', sans-serif;
-    font-size: x-large;
-    color: white;
-}
-
-/*insert choping cart logo in the button*/
-#samsungadd{
-    width: 15%;
-    height: 35px;
-    border-radius: 5px;
-    background-color:dodgerblue;
-    font-family: 'Roboto', sans-serif;
-    font-size: x-large;
-    color: white;
-    
-}
-
-#samsung{
-    margin-bottom: 50px;
-}
-
-#hej{
-    position:fixed;
-    top: 200px;
-    left: 40%;
-}
-#demo{
-    position:fixed;
-    top: 300px;
-    left: 40%; 
+.heading{
+    font-weight: 100;
 }
