@@ -13,6 +13,7 @@ function loadProducts() {
 }
 
 
+
 function initSite() {
     loadProducts();
     // This would also be a good place to initialize other parts of the UI
@@ -44,6 +45,7 @@ function addProductsToWebpage() {
     price.innerText=product.price + " kr";
     bildblock.appendChild(price);
 
+
     const addbutton=document.createElement("button");
 
     addbutton.addEventListener("click",()=>{
@@ -52,6 +54,7 @@ function addProductsToWebpage() {
     addbutton.className="btn btn-primary btn-xs"
     bildblock.appendChild(addbutton);
     addbutton.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Lägg till i kundvagnen';
+
 
   }
     // to reduce complexity and increase readability. Each function should have
