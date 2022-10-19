@@ -5,7 +5,7 @@
     margin: 0;
     box-sizing: border-box;
 }
-
+/* styling för header */
 /*fixed header. But the items scroll above the header. dosent look good*/
 .fixed-header{
     top:0;
@@ -13,12 +13,6 @@
     position: fixed;
     /*La till denna för kunna clicka på kundvagn*/
     z-index: 1;
-    /* background-color: black; */
-
-}
-
-/* styling för header */
-header {
     background-color: rgb(27, 26, 26);
     width: 100%;
     height: 3.5rem;
@@ -26,6 +20,7 @@ header {
     align-items: center;
     justify-content: space-between;
 }
+
 
 header h1 {
     color: white;
@@ -50,12 +45,12 @@ header h1 {
 
 .image{
     width: 200px;
-    padding-top: 20px;
+    padding-top: 10px;
 }
 
 .description{
-    font-size:small;
-    padding-top: 20px;
+    font-size:medium;
+    padding-top: 10px;
     font-weight: 200;
 }
 
@@ -63,5 +58,17 @@ header h1 {
     font-size: large;
 }
 .heading{
-    font-weight: 100;
+    font-weight: 100;   
+    font-size:60px;
+}
+
+.btn {
+    margin-bottom: 80px;
+}
+
+/* styling för footer */
+
+footer{
+    height: 150px;
+    background-color: rgb(29, 29, 29);
 }

@@ -44,6 +44,15 @@ function addProductsToWebpage() {
     price.innerText=product.price + " kr";
     bildblock.appendChild(price);
 
+    const addbutton=document.createElement("button");
+
+    addbutton.addEventListener("click",()=>{
+
+    });
+    addbutton.className="btn btn-primary btn-xs"
+    bildblock.appendChild(addbutton);
+    addbutton.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Lägg till i kundvagnen';
+
   }
     // to reduce complexity and increase readability. Each function should have
     // an explainetory comment like the one for this function, see row 22.
