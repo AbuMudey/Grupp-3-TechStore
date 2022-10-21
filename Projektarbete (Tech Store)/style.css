@@ -72,3 +72,9 @@ footer{
     height: 150px;
     background-color: rgb(29, 29, 29);
 }
+
+/* styling för kundvagn */
+
+.maincontent{
+    height: 2000px;
+}

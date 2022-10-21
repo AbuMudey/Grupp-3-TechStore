@@ -47,20 +47,30 @@ function addProductsToWebpage() {
 
 
     const addbutton=document.createElement("button");
-
-    addbutton.addEventListener("click",()=>{
-
-    });
     addbutton.className="btn btn-primary btn-xs"
     bildblock.appendChild(addbutton);
     addbutton.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Lägg till i kundvagnen';
+    
+    addbutton.addEventListener("click", () => {
+       
+        
+       if (!localStorage.getItem("mobil")){
+        localStorage.setItem("mobil", JSON.stringify([product]));
+       }else {
+        const mobil = JSON.parse(localStorage.getItem("mobil"));
+        mobil.push(product);
+        localStorage.setItem("mobil", JSON.stringify(mobil));
+       }
+    });    
+        
 
-
+        
   }
+}
+  
+    
+
     // to reduce complexity and increase readability. Each function should have
     // an explainetory comment like the one for this function, see row 22.
     // Add your code here, remember to brake your code in to smaller function blocks
     // TODO: Remove the console.log and these comments when you've read them.
-}
-
-
