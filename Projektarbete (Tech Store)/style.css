@@ -76,5 +76,10 @@ footer{
 /* styling för kundvagn */
 
 #maincontent{
-    height: 2000px;
+    position: relative;
+    margin-top: 100px;
+    display: flexbox;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
 }
