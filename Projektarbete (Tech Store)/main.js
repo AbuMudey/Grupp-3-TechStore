@@ -74,11 +74,22 @@ function rendermobiles() {
     mobil.forEach((mobil) => {
         
         const h1 = document.createElement("h1")
-
         h1.innerText = mobil.title
-
         mainconten.appendChild(h1)
 
+        const p=document.createElement("p");
+        p.innerText=mobil.description;
+        mainconten.appendChild(p);
+    
+        const img=document.createElement("img");
+        img.setAttribute("src" ,`assets/${mobil.image}`);
+        mainconten.appendChild(img);
+    
+        const price=document.createElement("p");
+        price.innerText=mobil.price + " kr";
+        mainconten.appendChild(price);
+     
+       
 
 
     });
