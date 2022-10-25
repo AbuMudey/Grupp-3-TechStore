@@ -75,6 +75,6 @@ footer{
 
 /* styling för kundvagn */
 
-.maincontent{
+#maincontent{
     height: 2000px;
 }
