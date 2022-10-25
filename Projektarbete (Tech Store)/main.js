@@ -1,5 +1,6 @@
 var listOfProducts;
 var kundnr=document.getElementById("kundvagnnr");
+const mainconten = document.getElementById("maincontent")
 /** Get products from the json file and store it in a gobal variable */
 function loadProducts() {
     fetch("./products.json")
@@ -63,11 +64,26 @@ function addProductsToWebpage() {
        }
     });    
         
-
-        
   }
+
 }
-  
+const mobil = JSON.parse(localStorage.getItem("mobil"));
+function rendermobiles() {
+    console.log (mobil)
+
+    mobil.forEach((mobil) => {
+        
+        const h1 = document.createElement("h1")
+
+        h1.innerText = mobil.title
+
+        mainconten.appendChild(h1)
+
+
+
+    });
+}
+  rendermobiles()
     
 
     // to reduce complexity and increase readability. Each function should have
