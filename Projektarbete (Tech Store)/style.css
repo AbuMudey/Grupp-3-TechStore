@@ -37,7 +37,6 @@ header h1 {
 #bildblock{
     position: relative;
     margin-top: 100px;
-    display: flexbox;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: x-large;
@@ -75,11 +74,55 @@ footer{
 
 /* styling för kundvagn */
 
+#icon-color{
+    color: black;
+    padding-right: 10px;
+    padding-top: 8px;
+    font-size: 40px;
+}
+#heading-text{
+    font-size: 50px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.heading-kundvagn {
+    padding-top: 100px;
+    display: flex;
+    justify-content: center;
+}
+
 #maincontent{
     position: relative;
-    margin-top: 100px;
-    display: flexbox;
+    margin-top: 50px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: x-large;
+    display: flex;
+    justify-content: center;
+    flex-wrap:wrap;
 }
+
+.mobile-product {
+    background-color: rgb(244, 244, 244);
+    border: 2px solid rgb(15, 115, 223);
+    border-radius: 10px;
+    margin: 10px;
+    padding: 15px;
+}
+
+.title-kundvagn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+}
+
+.img-kundvagn {
+    height: 250px;
+}
+
+.price-kundvagn {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.removebtn{
+margin-bottom: 0px;}

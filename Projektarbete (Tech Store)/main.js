@@ -72,27 +72,36 @@ function rendermobiles() {
     console.log (mobil)
 
     mobil.forEach((mobil) => {
-        
-        const h1 = document.createElement("h1")
-        h1.innerText = mobil.title
-        mainconten.appendChild(h1)
 
-        const p=document.createElement("p");
-        p.innerText=mobil.description;
-        mainconten.appendChild(p);
-    
+        const div = document.createElement("div");
+        div.classList.add("mobile-product")
+        
         const img=document.createElement("img");
+        img.classList.add("img-kundvagn")
         img.setAttribute("src" ,`assets/${mobil.image}`);
-        mainconten.appendChild(img);
-    
+        div.appendChild(img);
+
+        const h2 = document.createElement("h4")
+        h2.innerText = mobil.title
+        h2.classList.add("title-kundvagn");
+        div.appendChild(h2)
+
         const price=document.createElement("p");
+        price.classList.add("price-kundvagn")
         price.innerText=mobil.price + " kr";
-        mainconten.appendChild(price);
+        div.appendChild(price);
+
+        const removebtn=document.createElement("button");
+        removebtn.className="btn btn-danger btn-xs"
+        removebtn.classList.add("removebtn")
+        div.appendChild(removebtn);
+        removebtn.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Ta bort';
      
-       
+       mainconten.appendChild(div)
 
 
     });
+    
 }
   rendermobiles()
     
