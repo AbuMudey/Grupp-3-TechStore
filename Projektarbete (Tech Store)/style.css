@@ -126,3 +126,18 @@ footer{
 
 .removebtn{
 margin-bottom: 0px;}
+
+#number{
+    position: relative;
+   
+    color: rgb(255, 255, 255);
+    left: 42%;
+   
+}
+
+.totalprice{
+    position: relative;
+    left:39%;
+    font-size: larger;
+    font-family: 'Roboto', sans-serif;
+}
