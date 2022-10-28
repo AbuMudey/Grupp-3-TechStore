@@ -126,3 +126,8 @@ footer{
 
 .removebtn{
 margin-bottom: 0px;}
+
+#checkout{
+    display: flex;
+    justify-content: center;
+}

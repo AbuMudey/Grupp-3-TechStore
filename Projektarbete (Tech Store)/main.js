@@ -14,7 +14,6 @@ function loadProducts() {
 }
 
 
-
 function initSite() {
     loadProducts();
     // This would also be a good place to initialize other parts of the UI
@@ -53,7 +52,6 @@ function addProductsToWebpage() {
     addbutton.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Lägg till i kundvagnen';
     
     addbutton.addEventListener("click", () => {
-       
         
        if (!localStorage.getItem("mobil")){
         localStorage.setItem("mobil", JSON.stringify([product]));
@@ -61,11 +59,17 @@ function addProductsToWebpage() {
         const mobil = JSON.parse(localStorage.getItem("mobil"));
         mobil.push(product);
         localStorage.setItem("mobil", JSON.stringify(mobil));
+
+        
+     
+
        }
+       
     });    
         
   }
 
+  
 }
 const mobil = JSON.parse(localStorage.getItem("mobil"));
 function rendermobiles() {
@@ -97,12 +101,22 @@ function rendermobiles() {
         div.appendChild(removebtn);
         removebtn.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Ta bort';
      
-       mainconten.appendChild(div)
 
+        mainconten.appendChild(div)
 
-    });
-    
+});
+// slutför köp
+let checkoutbtn = document.createElement("button");
+checkoutbtn.className="btn btn-primary btn-xs"
+checkout.appendChild(checkoutbtn);
+checkoutbtn.innerHTML= ' Slutför ditt köp'
+checkoutbtn.addEventListener("click", () => {
+    alert("Ditt köp är nu slutfört !")
 }
+    
+
+)}
+
   rendermobiles()
     
 
