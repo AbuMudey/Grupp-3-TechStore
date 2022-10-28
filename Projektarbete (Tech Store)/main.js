@@ -16,6 +16,9 @@ function loadProducts() {
 
 function initSite() {
     loadProducts();
+    totalprice()
+    
+    
     // This would also be a good place to initialize other parts of the UI
 }
 
@@ -54,7 +57,7 @@ function addProductsToWebpage() {
     addbutton.addEventListener("click", () => {
 
        
-   
+  
  
        if (!localStorage.getItem("mobil")){
         localStorage.setItem("mobil", JSON.stringify([product]));
@@ -67,7 +70,7 @@ function addProductsToWebpage() {
      
 
        }
-       
+         clicknumber();
     });    
         
   }
@@ -77,7 +80,7 @@ function addProductsToWebpage() {
 const mobil = JSON.parse(localStorage.getItem("mobil"));
 function rendermobiles() {
     console.log (mobil)
-   clicknumber();
+  
     mobil.forEach((mobil) => {
 
         const div = document.createElement("div");
@@ -103,9 +106,9 @@ function rendermobiles() {
         removebtn.classList.add("removebtn")
         div.appendChild(removebtn);
         removebtn.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Ta bort';
-counter
+
        mainconten.appendChild(div)
-      main
+    
 
 
 });
@@ -115,6 +118,7 @@ checkoutbtn.className="btn btn-primary btn-xs"
 checkout.appendChild(checkoutbtn);
 checkoutbtn.innerHTML= ' Slutför ditt köp'
 checkoutbtn.addEventListener("click", () => {
+  localStorage.removeItem("mobil");
     alert("Ditt köp är nu slutfört !")
 }
     
@@ -124,13 +128,21 @@ checkoutbtn.addEventListener("click", () => {
   rendermobiles()
  
 function clicknumber(){
+const local=JSON.parse(localStorage.getItem("mobil"));
+
+var len=local.length;
+
+document.getElementById("number").innerHTML=len;
 
 
-var len=mobil.length;
 
-var total=0;
-for (var i=0;i<len;i++) {
-  total += mobil[i].price;
+
+}
+function totalprice(){
+  const leng=JSON.parse(localStorage.getItem("mobil"));
+  var total=0;
+for (var i=0;i<leng.length;i++) {
+  total += leng[i].price;
 }
 
 
@@ -138,10 +150,6 @@ const totalprice=document.createElement("h1");
 totalprice.classList.add("totalprice")
 totalprice.innerText="Totalt pris: "+total+" kr";
 priss.appendChild(totalprice);
-
-
-document.getElementById("number").innerHTML=len;
-
 }
 
 
