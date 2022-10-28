@@ -52,7 +52,10 @@ function addProductsToWebpage() {
     addbutton.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Lägg till i kundvagnen';
     
     addbutton.addEventListener("click", () => {
-        
+
+       
+   
+ 
        if (!localStorage.getItem("mobil")){
         localStorage.setItem("mobil", JSON.stringify([product]));
        }else {
@@ -74,7 +77,7 @@ function addProductsToWebpage() {
 const mobil = JSON.parse(localStorage.getItem("mobil"));
 function rendermobiles() {
     console.log (mobil)
-
+   clicknumber();
     mobil.forEach((mobil) => {
 
         const div = document.createElement("div");
@@ -100,9 +103,10 @@ function rendermobiles() {
         removebtn.classList.add("removebtn")
         div.appendChild(removebtn);
         removebtn.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Ta bort';
-     
+counter
+       mainconten.appendChild(div)
+      main
 
-        mainconten.appendChild(div)
 
 });
 // slutför köp
@@ -118,8 +122,30 @@ checkoutbtn.addEventListener("click", () => {
 )}
 
   rendermobiles()
-    
+ 
+function clicknumber(){
 
+
+var len=mobil.length;
+
+var total=0;
+for (var i=0;i<len;i++) {
+  total += mobil[i].price;
+}
+
+
+const totalprice=document.createElement("h1");
+totalprice.classList.add("totalprice")
+totalprice.innerText="Totalt pris: "+total+" kr";
+priss.appendChild(totalprice);
+
+
+document.getElementById("number").innerHTML=len;
+
+}
+
+
+ 
     // to reduce complexity and increase readability. Each function should have
     // an explainetory comment like the one for this function, see row 22.
     // Add your code here, remember to brake your code in to smaller function blocks
