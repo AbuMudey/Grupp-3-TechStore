@@ -131,7 +131,7 @@ margin-bottom: 0px;}
 #number{
     position: relative;
    
-    color: rgb(255, 255, 255);
+    color: rgb(243, 26, 26);
     left: 42%;
    
 }
@@ -147,4 +147,16 @@ margin-bottom: 0px;}
     display: flex;
     justify-content: center;
 }
+
+.inlogg{
+    position: relative;
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
  
+
+ 
+   
+}
+

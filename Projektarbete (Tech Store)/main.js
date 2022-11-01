@@ -1,3 +1,4 @@
+
 var listOfProducts;
 var kundnr=document.getElementById("kundvagnnr");
 const mainconten = document.getElementById("maincontent")
@@ -14,10 +15,15 @@ function loadProducts() {
 }
 
 
+const local=JSON.parse(localStorage.getItem("mobil"));
+var len=local.length;
+document.querySelector(".number").innerHTML=len;
+
 function initSite() {
     loadProducts();
     totalprice()
-    
+
+
     
     // This would also be a good place to initialize other parts of the UI
 }
@@ -131,16 +137,20 @@ localStorage.removeItem("mobil");
 )}
 
   rendermobiles()
+  
  
 function clicknumber(){
 const local=JSON.parse(localStorage.getItem("mobil"));
 
 var len=local.length;
 
-document.getElementById("number").innerHTML=len;
+
+document.querySelector(".number").innerHTML=len;
+
 
 
 }
+
 function totalprice(){
   const leng=JSON.parse(localStorage.getItem("mobil"));
   var total=0;
@@ -155,7 +165,11 @@ priss.appendChild(totalprice);
 }
 
 
- 
+
+
+
+
+
     // to reduce complexity and increase readability. Each function should have
     // an explainetory comment like the one for this function, see row 22.
     // Add your code here, remember to brake your code in to smaller function blocks
