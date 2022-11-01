@@ -61,9 +61,7 @@ function addProductsToWebpage() {
     addbutton.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Lägg till i kundvagnen';
     
     addbutton.addEventListener("click", () => {
-
-       
-  
+ 
  
        if (!localStorage.getItem("mobil")){
         localStorage.setItem("mobil", JSON.stringify([product]));
@@ -72,8 +70,6 @@ function addProductsToWebpage() {
         mobil.push(product);
         localStorage.setItem("mobil", JSON.stringify(mobil));
 
-        
-     
 
        }
          clicknumber();
@@ -112,23 +108,32 @@ function rendermobiles() {
         removebtn.classList.add("removebtn")
         div.appendChild(removebtn);
         removebtn.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Ta bort';
+        
+        // Delete specefic item. Right now it only deletes the FIST item.
+        // page refresh is currently needed to see the update - ensure refreshing is not needed (smooth deletion)
+        let indexToRemove;
+        removebtn.addEventListener("click", () => {
+          console.log("removed");
+          const mobil = JSON.parse(localStorage.getItem("mobil"));
+          mobil.splice(indexToRemove, 1)
+          localStorage.setItem("mobil", JSON.stringify(mobil));
+        })
 
        mainconten.appendChild(div)
     
 
-
 });
-// slutför köp
+// Complete the purches. And delete the cart after pop up messege. 
+// page refresh is currently needed to see the update - ensure refreshing is not needed (smooth deletion)
 let checkoutbtn = document.createElement("button");
 checkoutbtn.className="btn btn-primary btn-xs"
 checkout.appendChild(checkoutbtn);
-checkoutbtn.innerHTML= ' Slutför ditt köp'
+checkoutbtn.innerHTML= '<i class="fa-sharp fa-solid fa-check"></i>Slutför ditt köp'
 checkoutbtn.addEventListener("click", () => {
-  localStorage.removeItem("mobil");
+localStorage.removeItem("mobil");
     alert("Ditt köp är nu slutfört !")
 }
     
-
 )}
 
   rendermobiles()
@@ -139,7 +144,9 @@ const local=JSON.parse(localStorage.getItem("mobil"));
 
 var len=local.length;
 
+
 document.querySelector(".number").innerHTML=len;
+
 
 
 }
@@ -150,7 +157,6 @@ function totalprice(){
 for (var i=0;i<leng.length;i++) {
   total += leng[i].price;
 }
-
 
 const totalprice=document.createElement("h1");
 totalprice.classList.add("totalprice")
