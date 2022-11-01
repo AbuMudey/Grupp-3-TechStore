@@ -19,5 +19,35 @@
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "LGV30.png",
         "price": 7495
+    },{
+        "title": "One plus 8T",
+        "description": "Super nice and beautiful smartphone from samsung.",
+        "image": "oneplus8T.png",
+        "price": 3996
+    },{
+        "title": "samsung s22",
+        "description": "Super nice and beautiful smartphone from samsung.",
+        "image": "samsungs22.png",
+        "price": 9990
+    },{
+        "title": "iphone 14",
+        "description": "Super nice and beautiful smartphone from apple.",
+        "image": "iphone14.png",
+        "price": 11990
+    },{
+        "title": "Noting phone 1",
+        "description": "Super nice and beautiful smartphone",
+        "image": "nothingphone 1.png",
+        "price": 5490
+    },{
+        "title": "iphone 13 pro",
+        "description": "Super nice and beautiful smartphone from Apple.",
+        "image": "iphone13pro.png",
+        "price": 10600
+    },{
+        "title": "Google pixel 7 pro",
+        "description": "Super nice and beautiful smartphone from Google.",
+        "image": "googlepixel7.png",
+        "price": 7290
     }
 ]
