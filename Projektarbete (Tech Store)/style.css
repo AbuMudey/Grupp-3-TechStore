@@ -138,7 +138,8 @@ margin-bottom: 0px;}
 
 .totalprice{
     position: relative;
-    left:39%;
+    display: flex;
+    justify-content: center;
     font-size: larger;
     font-family: 'Roboto', sans-serif;
 }
