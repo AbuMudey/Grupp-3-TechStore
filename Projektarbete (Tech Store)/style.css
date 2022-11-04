@@ -65,6 +65,17 @@ header h1 {
     margin-bottom: 80px;
 }
 
+header div{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 155px;
+}
+.number{
+    margin-bottom: 3px;
+    font-family: 'Roboto', sans-serif;
+}
+
 /* styling för footer */
 
 footer{
@@ -125,24 +136,18 @@ footer{
 }
 
 .removebtn{
-margin-bottom: 0px;}
-
-
-#number{
-    position: relative;
-   
-    color: rgb(243, 26, 26);
-    left: 42%;
-   
+margin-bottom: 0px;
 }
 
 .totalprice{
     position: relative;
     display: flex;
     justify-content: center;
-    font-size: larger;
+    font-size:x-large;
+    margin: 40px;
     font-family: 'Roboto', sans-serif;
 }
+
 #checkout{
     display: flex;
     justify-content: center;
@@ -154,9 +159,12 @@ margin-bottom: 0px;}
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: x-large;
- 
+}
 
- 
-   
+/* styling för icon på slutför köp knapp */
+
+.fa-sharp{
+    padding-right: 5px;
+    font-size: 18px;
 }
 
