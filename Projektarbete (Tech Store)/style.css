@@ -125,16 +125,9 @@ footer{
 }
 
 .removebtn{
-margin-bottom: 0px;}
-
-
-#number{
-    position: relative;
-   
-    color: rgb(243, 26, 26);
-    left: 42%;
-   
+margin-bottom: 0px;
 }
+
 
 .totalprice{
     position: relative;
@@ -154,9 +147,12 @@ margin-bottom: 0px;}
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: x-large;
- 
-
- 
-   
 }
 
+.hej{
+    position: relative;
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+}

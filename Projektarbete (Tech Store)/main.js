@@ -1,4 +1,56 @@
 
+
+
+
+function welcome(){
+
+ console.log("yes");
+}
+function login() {
+  const objPeople=JSON.parse(localStorage.getItem("loggin"));
+var username= document.getElementById("username").value
+var password= document.getElementById("password").value
+
+for(i=0;i<objPeople.length;i++){
+  if(username==objPeople[i].username && password==objPeople[i].password){
+     console.log(username+"is loggged in: ");
+     
+      welcome() ;
+      localStorage.setItem(username,"isloggin");
+    
+  
+  }else if(username==objPeople[i].username && password!=objPeople[i].password){
+    alert("fel lösenord");
+  }
+  }
+}
+
+function registister(){
+
+  var regististerUser = document.getElementById("newuser").value
+  var registerPassword= document.getElementById("newpassword").value
+  var newUser={
+      username:regististerUser,
+      password:registerPassword
+  }
+  if (!localStorage.getItem("loggin")){
+    localStorage.setItem("loggin", JSON.stringify([newUser]));
+   }else {
+    const objPeople = JSON.parse(localStorage.getItem("loggin"));
+    objPeople.push(newUser);
+    localStorage.setItem("loggin", JSON.stringify(objPeople));
+
+
+   }
+
+
+ 
+  
+}
+
+
+
+
 var listOfProducts;
 var kundnr=document.getElementById("kundvagnnr");
 const mainconten = document.getElementById("maincontent")
@@ -79,11 +131,13 @@ function addProductsToWebpage() {
 
   
 }
-const mobil = JSON.parse(localStorage.getItem("mobil"));
+
+
 function rendermobiles() {
-    console.log (mobil)
+   mainconten.innerHTML="";
   
-    mobil.forEach((mobil) => {
+  const mobils = JSON.parse(localStorage.getItem("mobil"));
+    mobils.forEach((mobil) => {
 
         const div = document.createElement("div");
         div.classList.add("mobile-product")
@@ -111,35 +165,51 @@ function rendermobiles() {
         
         // Delete specefic item. Right now it only deletes the FIST item.
         // page refresh is currently needed to see the update - ensure refreshing is not needed (smooth deletion)
-        let indexToRemove;
-        removebtn.addEventListener("click", () => {
-          console.log("removed");
-          const mobil = JSON.parse(localStorage.getItem("mobil"));
-          mobil.splice(indexToRemove, 1)
-          localStorage.setItem("mobil", JSON.stringify(mobil));
-        })
 
+        removebtn.addEventListener("click",()=>removeitem(mobil));
        mainconten.appendChild(div)
     
 
 });
 // Complete the purches. And delete the cart after pop up messege. 
 // page refresh is currently needed to see the update - ensure refreshing is not needed (smooth deletion)
+
+    
+}
+
 let checkoutbtn = document.createElement("button");
 checkoutbtn.className="btn btn-primary btn-xs"
 checkout.appendChild(checkoutbtn);
 checkoutbtn.innerHTML= '<i class="fa-sharp fa-solid fa-check"></i>Slutför ditt köp'
 checkoutbtn.addEventListener("click", () => {
-localStorage.removeItem("mobil");
-    alert("Ditt köp är nu slutfört !")
-}
-    
-)}
 
+localStorage.removeItem("mobil");
+    alert("Ditt köp är nu slutfört !");
+    rendermobiles();
+    clicknumber();
+    totalprice();
+});
   rendermobiles()
-  
  
+ function removeitem(mobil){
+  
+    
+     const mobils=JSON.parse(localStorage.getItem("mobil"));
+
+     const sett=mobils.findIndex(product=>product.title===mobil.title);
+     console.log(sett);
+      
+          mobils.splice(sett,1);
+          localStorage.setItem("mobil",JSON.stringify(mobils));
+          rendermobiles();
+          clicknumber();
+          totalprice();
+ }  
+
+
+
 function clicknumber(){
+
 const local=JSON.parse(localStorage.getItem("mobil"));
 
 var len=local.length;
@@ -152,6 +222,7 @@ document.querySelector(".number").innerHTML=len;
 }
 
 function totalprice(){
+  priss.innerHTML="";
   const leng=JSON.parse(localStorage.getItem("mobil"));
   var total=0;
 for (var i=0;i<leng.length;i++) {
@@ -163,7 +234,6 @@ totalprice.classList.add("totalprice")
 totalprice.innerText="Totalt pris: "+total+" kr";
 priss.appendChild(totalprice);
 }
-
 
 
 
