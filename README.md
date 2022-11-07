@@ -4,7 +4,7 @@ Grupp 3, TechStore
 Det här är ett gruppprojekt skapat av alexander Lindoffsson (alelin4), Abukar Mudey (AbuMudey) and oscar Warmark (oscarwarmark). Där uppgiften var att återskappa en webbshop för mobiler som våran lärare hade skapat. 
 
 Länk till repot: https://github.com/AbuMudey/Grupp-3-TechStore
-Länk till demot:
+
 
 Detta är kraven vi har valt att genomföra för att uppnå betyget G:
 
@@ -45,4 +45,8 @@ Ni skall jobba enligt GIT-Flow.
 Alla ändringar i koden skall gå igenom en Pull-Request in i er default-branch (main/master).
 Er default branch skall vara låst så ni ej kan pusha direkt till den branchen, detta sätts med en regel i Github.
 
+VG-krav: 
+
+Utöka produktlistan med ett urval från årets modeller så det totalt finns 10 stycken telefoner.
+När man bekräftar ett köp skall kundvagnen tömmas.
 
