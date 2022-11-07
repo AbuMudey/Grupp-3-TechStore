@@ -79,6 +79,10 @@ header div{
     margin-left: 10px;
 }
 
+main{
+    min-height: 100vh;
+}
+
 /* styling för footer */
 footer{
     height: 150px;

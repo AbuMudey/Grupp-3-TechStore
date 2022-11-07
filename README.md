@@ -4,7 +4,7 @@ Grupp 3, TechStore
 Det här är ett gruppprojekt skapat av alexander Lindoffsson (alelin4), Abukar Mudey (AbuMudey) and oscar Warmark (oscarwarmark). Där uppgiften var att återskappa en webbshop för mobiler som våran lärare hade skapat. 
 
 Länk till repot: https://github.com/AbuMudey/Grupp-3-TechStore
-Länk till demot:
+
 
 Detta är kraven vi har valt att genomföra för att uppnå betyget G:
 
