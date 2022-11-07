@@ -26,15 +26,41 @@
 
 
         <main>
-            <!-- Add the content of your site here via javascript -->
-            <div class="inlogg">
-           <input type="button" value="Login" id="inloggknapp" onclick="login()">
-           <div id="har"></div>
 
-           <input type="button" value="Registera" id="inloggknapp" onclick="registister()">
-           <div id="regist"></div>
-        </div>
-        </main>
+        <div id="har"></div>
+   <div class="hej">
+        <span id="bytelogin">
+         <form >
+             <h2>Login</h2>
+             <label >Namn:</label></br>
+             <input id="username"></br></br>
+ 
+             <label>Lösenord</label></br>
+             <input id="password"></br>
+             
+           <button type="button" onclick="login()">Login</button> 
+         </form>
+       </span>
+         
+       
+ <span id="byteregi">
+         <form >
+             <h2>Regi</h2>
+             <label >Namn:</label></br>
+             <input id="newuser"></br></br>
+             <label>Lösenord</label></br>
+             <input id="newpassword"></br>
+              <button type="button" onclick="registister()">regi</button>
+         </form>
+  </span>   
+  
+  <span id="Logout">
+<button></button>
+  </span>
+ </div>
+
+
+    </main>
         <footer></footer>
     </body>
 </html>

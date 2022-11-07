@@ -139,6 +139,7 @@ footer{
 margin-bottom: 0px;
 }
 
+
 .totalprice{
     position: relative;
     display: flex;
@@ -168,3 +169,10 @@ margin-bottom: 0px;
     font-size: 18px;
 }
 
+.hej{
+    position: relative;
+    margin-top: 150px;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: x-large;
+}
