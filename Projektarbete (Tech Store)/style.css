@@ -5,13 +5,12 @@
     margin: 0;
     box-sizing: border-box;
 }
+
 /* styling för header */
-/*fixed header. But the items scroll above the header. dosent look good*/
 .fixed-header{
     top:0;
     width: 100;
     position: fixed;
-    /*La till denna för kunna clicka på kundvagn*/
     z-index: 1;
     background-color: rgb(27, 26, 26);
     width: 100%;
@@ -20,7 +19,6 @@
     align-items: center;
     justify-content: space-between;
 }
-
 
 header h1 {
     color: white;
@@ -76,21 +74,25 @@ header div{
     font-family: 'Roboto', sans-serif;
 }
 
-/* styling för footer */
+.fa-regular{
+    font-size: x-large;
+    margin-left: 10px;
+}
 
+/* styling för footer */
 footer{
     height: 150px;
     background-color: rgb(29, 29, 29);
 }
 
 /* styling för kundvagn */
-
 #icon-color{
     color: black;
     padding-right: 10px;
     padding-top: 8px;
     font-size: 40px;
 }
+
 #heading-text{
     font-size: 50px;
     font-family: 'Roboto', sans-serif;
@@ -139,7 +141,6 @@ footer{
 margin-bottom: 0px;
 }
 
-
 .totalprice{
     position: relative;
     display: flex;
@@ -163,7 +164,6 @@ margin-bottom: 0px;
 }
 
 /* styling för icon på slutför köp knapp */
-
 .fa-sharp{
     padding-right: 5px;
     font-size: 18px;
@@ -175,4 +175,15 @@ margin-bottom: 0px;
     text-align: center;
     font-family: 'Roboto', sans-serif;
     font-size: x-large;
+}
+
+@media (max-width: 400px) {
+    .img-kundvagn {
+        height: 110px;
+    }
+
+    .title-kundvagn {
+        font-family: 'Roboto', sans-serif;
+        font-size: 25px;
+    }
 }

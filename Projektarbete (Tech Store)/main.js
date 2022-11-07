@@ -1,11 +1,10 @@
 
-
-
-
 function welcome(){
 
  console.log("yes");
 }
+
+// Function for signing in a registered user
 function login() {
   const objPeople=JSON.parse(localStorage.getItem("loggin"));
 var username= document.getElementById("username").value
@@ -18,13 +17,13 @@ for(i=0;i<objPeople.length;i++){
       welcome() ;
       localStorage.setItem(username,"isloggin");
     
-  
   }else if(username==objPeople[i].username && password!=objPeople[i].password){
     alert("fel lösenord");
   }
   }
 }
 
+//Function for registrer a new user and stores it in localstorage.
 function registister(){
 
   var regististerUser = document.getElementById("newuser").value
@@ -39,17 +38,8 @@ function registister(){
     const objPeople = JSON.parse(localStorage.getItem("loggin"));
     objPeople.push(newUser);
     localStorage.setItem("loggin", JSON.stringify(objPeople));
-
-
    }
-
-
- 
-  
 }
-
-
-
 
 var listOfProducts;
 var kundnr=document.getElementById("kundvagnnr");
@@ -66,7 +56,6 @@ function loadProducts() {
     });
 }
 
-
 const local=JSON.parse(localStorage.getItem("mobil"));
 var len=local.length;
 document.querySelector(".number").innerHTML=len;
@@ -74,16 +63,10 @@ document.querySelector(".number").innerHTML=len;
 function initSite() {
     loadProducts();
     totalprice()
-
-
-    
-    // This would also be a good place to initialize other parts of the UI
 }
 
-/** Uses the loaded products data to create a visible product list on the website */
+// render products on first page from the JSON file.
 function addProductsToWebpage() {
-    // Check your console to see that the products are stored in the listOfProducts varible.
-    
     console.log(listOfProducts);
   for(const product of listOfProducts){
     const h1=document.createElement("h1");
@@ -106,7 +89,6 @@ function addProductsToWebpage() {
     price.innerText=product.price + " kr";
     bildblock.appendChild(price);
 
-
     const addbutton=document.createElement("button");
     addbutton.className="btn btn-primary btn-xs"
     bildblock.appendChild(addbutton);
@@ -114,25 +96,19 @@ function addProductsToWebpage() {
     
     addbutton.addEventListener("click", () => {
  
- 
        if (!localStorage.getItem("mobil")){
         localStorage.setItem("mobil", JSON.stringify([product]));
        }else {
         const mobil = JSON.parse(localStorage.getItem("mobil"));
         mobil.push(product);
         localStorage.setItem("mobil", JSON.stringify(mobil));
-
-
        }
          clicknumber();
-    });    
-        
+    });         
   }
-
-  
 }
 
-
+// render the selected products and displays them in the cart.
 function rendermobiles() {
    mainconten.innerHTML="";
   
@@ -161,20 +137,11 @@ function rendermobiles() {
         removebtn.className="btn btn-danger btn-xs"
         removebtn.classList.add("removebtn")
         div.appendChild(removebtn);
-        removebtn.innerHTML= '<i class="fa fa-shopping-cart fa-1x" aria-hidden="true"></i> Ta bort';
-        
-        // Delete specefic item. Right now it only deletes the FIST item.
-        // page refresh is currently needed to see the update - ensure refreshing is not needed (smooth deletion)
+        removebtn.innerHTML= '<i class="fa-regular fa-trash-can"></i>  Ta bort';
 
         removebtn.addEventListener("click",()=>removeitem(mobil));
        mainconten.appendChild(div)
-    
-
 });
-// Complete the purches. And delete the cart after pop up messege. 
-// page refresh is currently needed to see the update - ensure refreshing is not needed (smooth deletion)
-
-    
 }
 
 let checkoutbtn = document.createElement("button");
@@ -191,14 +158,11 @@ localStorage.removeItem("mobil");
 });
   rendermobiles()
  
- function removeitem(mobil){
-  
-    
-     const mobils=JSON.parse(localStorage.getItem("mobil"));
 
+  // function for removing items from cart.
+ function removeitem(mobil){
+     const mobils=JSON.parse(localStorage.getItem("mobil"));
      const sett=mobils.findIndex(product=>product.title===mobil.title);
-     console.log(sett);
-      
           mobils.splice(sett,1);
           localStorage.setItem("mobil",JSON.stringify(mobils));
           rendermobiles();
@@ -206,21 +170,14 @@ localStorage.removeItem("mobil");
           totalprice();
  }  
 
-
-
+// Displays how many products there are in the cart.
 function clicknumber(){
-
 const local=JSON.parse(localStorage.getItem("mobil"));
-
 var len=local.length;
-
-
 document.querySelector(".number").innerHTML=len;
-
-
-
 }
 
+// calculates total price and displays it in the cart.
 function totalprice(){
   priss.innerHTML="";
   const leng=JSON.parse(localStorage.getItem("mobil"));
@@ -234,13 +191,3 @@ totalprice.classList.add("totalprice")
 totalprice.innerText="Totalt pris: "+total+" kr";
 priss.appendChild(totalprice);
 }
-
-
-
-
-
-
-    // to reduce complexity and increase readability. Each function should have
-    // an explainetory comment like the one for this function, see row 22.
-    // Add your code here, remember to brake your code in to smaller function blocks
-    // TODO: Remove the console.log and these comments when you've read them.
